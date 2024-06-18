@@ -10,8 +10,10 @@ end
 function love.wheelmoved(x, y)
     if y > 0 then
         INDEX_DIVISOR = INDEX_DIVISOR < #DIVISOR and INDEX_DIVISOR + 1 or INDEX_DIVISOR
+        SQUARE_X, SQUARE_Y = 0, 0
     elseif y < 0 then
         INDEX_DIVISOR = INDEX_DIVISOR > 1 and INDEX_DIVISOR - 1 or INDEX_DIVISOR
+        SQUARE_X, SQUARE_Y = 0, 0
     end
 end
 
