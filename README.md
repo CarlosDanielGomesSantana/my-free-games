@@ -1,3 +1,15 @@
+# Mecânicas Implementadas
+
+## Nível Fácil
+
+1. **Movimentação**
+   - Movimentação em eixos X e Y
+
+2. **Colisões**
+   - AABB Collision
+
+# Jogos Arcade
+
 ## Nível Fácil
 
 1. **Pong**
