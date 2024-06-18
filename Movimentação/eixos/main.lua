@@ -1,6 +1,7 @@
 function love.load()
     WIDTH, HEIGHT = love.graphics.getDimensions()
     WHITE_COLOR = {1, 1, 1}
+    RED_COLOR = {1, 0, 0}
     DIVISOR = {5, 10, 20, 40, 50, 100, 200}
     INDEX_DIVISOR = 1
 end
@@ -30,5 +31,10 @@ function love.draw()
             point  -- The position of second point on the y-axis.
         )
     end
+
+    love.graphics.setColor(RED_COLOR)
+
+    love.graphics.rectangle("line", 0, 0, 60, 60)
+
 end
 
