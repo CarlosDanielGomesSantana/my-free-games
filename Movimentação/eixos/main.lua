@@ -17,12 +17,12 @@ function love.wheelmoved(x, y)
     end
 end
 
-function love.keypressed( key, scancode, isrepeat )
+function love.keypressed(key, scancode, isrepeat)
     if scancode == "right" and SQUARE_X < WIDTH - SQUARE_X/2 then
         SQUARE_X = SQUARE_X + DIVISOR[INDEX_DIVISOR]
-    elseif scancode == "left" and 0 < SQUARE_X  then
+    elseif scancode == "left" and 0 < SQUARE_X then
         SQUARE_X = SQUARE_X - DIVISOR[INDEX_DIVISOR]
-    elseif scancode == "down" and SQUARE_Y < HEIGHT - SQUARE_Y/2 then
+    elseif scancode == "down" and SQUARE_Y + DIVISOR[INDEX_DIVISOR] < HEIGHT then
         SQUARE_Y = SQUARE_Y + DIVISOR[INDEX_DIVISOR]
     elseif scancode == "up" and 0 < SQUARE_Y then
         SQUARE_Y = SQUARE_Y - DIVISOR[INDEX_DIVISOR]
@@ -49,7 +49,6 @@ function love.draw()
     end
 
     love.graphics.setColor(RED_COLOR)
-
     love.graphics.setLineWidth(3)
     love.graphics.rectangle(
         "line",
